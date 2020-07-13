@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 4 CSS -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- CSS Personalizado-->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap JS -->
+    <!--<script defer src="js/jquery-3.5.1.min.js" ></script>-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script defer src="js/popper.min.js"></script>
+    <script defer src="js/bootstrap.min.js"></script>
+
+    <!--Javascript-->
+    <script type="text/javascript" src="js/products.js"></script>
+    <script type="text/javascript" src="js/shoppingCart.js"></script>
+    <script defer type="text/javascript" src="js/app.js"></script>
+
+
+    <title>Guitar store</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="text-light bg-dark text-center">Guitar store</h1>
+        </header>
+        <div id="show-by-order">
+        </div>
+
+        <div class="container container-form hide-by-order">
+            <form id="form-search" class="row">
+                <!--buscador-->
+                <div class=" col-md-6 col-xs-4 input-search">
+                    <input type="text" value="" placeholder="Search" id="search-box-input"/>
+                </div>
+                
+                <!--botón para ejecutar la búsqueda del buscador-->
+                <div class="col-md-4 col-xs-4 button-search-container">
+                    <input type="submit" value="Search" id="search-button"/>
+                </div>
+
+                <!--botón que reestablece todos los productos-->
+                <div class="col-md-2 col-xs-4 button-restore-container">
+                    <input type="button" value="Restore" id="restore-button" onclick="renderProductsRestore()"/>
+                </div>
+
+            </form>    
+        </div>
+
+        <!--muestra todos el resultado de la búsqueda-->
+        <div class="container container-results hide-by-order">
+            <div class="row" id="search-resume">
+                <div class="col-12 search-resume-text">
+                    <p id="search-result-length"></p>   
+                </div>
+    ​
+            </div>
+        </div>
+        
+        <div class="container container-products-and-cart hide-by-order">
+            <div  class="row"> 
+                <div class="col-xl-9 col-lg-8 col-md-6 col-sm-12  products-container">
+                    <!--muestra todos los productos de la lista-->
+                    <div id="product-list" class="container">
+                        <div class="row" id="product-list-row"> 
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 shopping-cart-container">
+                    <!--muestra todos los productos del carrito de compras-->
+                    <div id="shopping-cart" class="container">
+                        <div id="shopping-cart-row" class="row">
+                            
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>
+

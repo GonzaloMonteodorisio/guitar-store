@@ -1,0 +1,49 @@
+[
+	{
+		"id": "a",
+		"title": "Guitar Gracia C170-01", 
+		"thumbnail": "C170-01.jpg", 
+		"price" : 12000,
+		"description": "guitar a description"
+	},
+
+	{
+		"id": "b",
+		"title": "Guitar Fender FA25-5E", 
+		"thumbnail": "FenderFa235E.jpg", 
+		"price": 15000, 
+		"description": "guitar b description"
+	},
+
+	{
+		"id": "c",
+		"title": "Guitar Texas Cutaway", 
+		"thumbnail": "texasCutaway.jpg", 
+		"price": 20000,
+		"description": "guitar c description" 
+	},
+
+	{
+		"id": "d",
+		"title": "Guitar Valencia VC102BUS", 
+		"thumbnail": "ValenciaVc102Bus.jpg", 
+		"price": 28000,
+		"description": "guitar d description"
+	},
+
+		{
+		"id": "e",
+		"title": "Guitar Valencia VC104BK", 
+		"thumbnail": "ValenciaVc104Bk.jpg", 
+		"price": 12000,
+		"description": "guitar e description"
+	},
+	{
+		"id": "f",
+		"title": "Guitar Martin &  11DXMAE", 
+		"thumbnail": "martin&11DXMAE.jpg", 
+		"price": 17000,
+		"description": "guitar f description"
+	}
+]
+
