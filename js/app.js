@@ -25,14 +25,13 @@ var images = [];
 var imagesContainer = [];
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-$(document).ready(function(e) {
+$(document).ready((e)=>{
 
     loadShoppingCart();
 
     confirmeOrder();
 
     urlLocal = 'json/data.json';
-    initData();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
     searchKey = $('#search-key');
@@ -40,18 +39,18 @@ $(document).ready(function(e) {
 
     searchButton = $('#search-button');
     searchButton.attr('disabled', true);
-    searchButton.click(function(event) {
+    searchButton.click((event)=> {
         getSearchBoxValue(event);
     });
 
     searchBoxInput = $("#search-box-input");
 
-    searchBoxInput.on('input', function (event) {
+    searchBoxInput.on('input', (event)=> {
         searchButton.attr('disabled', (event.target.value.length <= 3));
     });
 
     formSearch = $("#form-search");
-    formSearch.submit(function (event) {
+    formSearch.submit((event)=> {
         event.preventDefault();
         if (!searchButton.disabled) {
             getSearchBoxValue();
@@ -61,27 +60,15 @@ $(document).ready(function(e) {
     searchResume = $("#search-resume");
     searchResume.css('display', 'none'); 
 
-    $('body').on('click', '#enlarge-image', function(){
+    $('body').on('click', '#enlarge-image', ()=>{
         $($(event.target).parent()).children(('.modal-container')).addClass('active');
     });
 
-    $('body').on('click', '.modal-container', function(){
+    $('body').on('click', '.modal-container', ()=>{
         $(event.target).removeClass('active');
     });
-
 });
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-function initData() {
-    $.ajax({
-        method: "GET", 
-        url: urlLocal
-    }).done(function(data) {
-        renderProductsInit(data);
-    }).fail(function(error) {
-        console.log(error);
-    });
-};
 
 
 

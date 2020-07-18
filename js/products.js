@@ -1,19 +1,8 @@
-function renderProductsInit(products) {
-    results =[];
-    $('#product-list-row').empty();
-    products.forEach(product => {        
-        var htmlTemplate = getProductsHTML(product);  
-        $('#product-list-row').append(htmlTemplate);  
-        results.push(product); 
-    })
-
-};
-
 function getProductsHTML(product) {
     return `
                 <div class="search-item col-xl-3 col-lg-4 col-md-10 m-3 product-description" id="${product.id}">
                     <div class="modal-container">
-                        <img src="images/${product.thumbnail}">
+                        <img src="${product.thumbnail}">
                     </div>
                     <p><strong>${product.title}</strong></p>
                     <p>Price: $${product.price}</p>
@@ -31,13 +20,13 @@ function getSearchBoxValue(event) {
 };
 
 function searchProducts(key) {
-    urlLocal = 'json/data.json';
+    url = `https://api.mercadolibre.com/sites/MLA/search?q=${key}`;
     ajaxdata = $.ajax({
             method: "GET", 
-            url: urlLocal
-        }).done(function(data) {
-            renderProducts(data, key);
-        }).fail(function(error) {
+            url: url
+        }).done((data)=> {
+            renderProducts(data.results, key);
+        }).fail((error)=> {
         })
 };
 
@@ -73,7 +62,6 @@ function setSearchKeyRender(key, resultLength) {
 
 function renderProductsRestore() {
     results = [];
-    urlLocal = 'json/data.json';
-    initData();
+    $('#product-list-row').empty();
     $('#search-resume').hide('slow');
 };
