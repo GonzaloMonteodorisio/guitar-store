@@ -1,0 +1,241 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+	display: inline-block;
+	width: 100%;
+	top: 0px;
+	h1 {
+		padding: 20px;
+	}
+}
+#show-by-order {
+	display: none;
+	margin-top: 30px;
+	p {	
+		text-align: center;
+	}
+}
+.container-form {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	#form-search {
+		.input-search {
+			#search-box-input {
+				width: 100%;
+				margin: 0;
+			}
+			@media (max-width: 768px) {
+				margin-top: 10px;
+			}
+		}
+		.button-search-container {
+			#search-button {
+				width: 100%;
+				margin: 0;
+				border: none;
+				border-radius: 5px;
+				padding: 5px 10px;
+				text-align: center;
+				background-color: #33c4b3;
+				color: white;
+				&:hover {
+					filter: brightness(85%);
+				}
+				&:disabled {
+					filter: opacity(50%);
+				}
+			}
+			@media (max-width: 768px) {
+				margin-top: 10px;
+			}
+		}
+		.button-restore-container {
+			#restore-button {
+				width: 100%;
+				margin: 0;
+				border: none;
+				border-radius: 5px;
+				padding: 5px 10px;
+				text-align: center;
+				&:hover {
+					filter: brightness(85%);
+				}	
+			}
+			@media (max-width: 768px) {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.remove-button {
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	text-align: center;
+	&:hover {
+		filter: brightness(85%);
+	}
+}
+
+.container-results {
+	#search-resume {
+		.search-resume-text {
+			#search-result-length {
+				font-size: 22px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.container-products-and-cart {
+	.row {
+		.products-container {
+			#product-list {
+				#product-list-row {
+					.product-description {
+						background-color: rgba(0, 188, 212, 0.3);
+						border: none;
+						padding: 15px;
+						border-radius: 10px;
+						text-align: center;
+						strong {
+							font-size: 20px;
+							line-height: 10px;
+						}
+						.modal-container {
+							display: inline-block;	
+							position: relative;					
+							img {
+								height: 180px;
+								margin-bottom: 15px;
+							}
+						}
+						.modal-container.active {
+							position: fixed;
+							width: 100vw;
+							height: 100vh;
+							top: 0;
+							left: 0;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							z-index: 1;	
+							img {
+								position: fixed;
+								display: block;		
+								margin: auto;				
+								height: 70vh;
+								margin-bottom: 15px;
+								z-index: 1;
+							}						
+						}
+						.modal-container.active::after {
+							content: "";
+							position: fixed;
+							width: 100vw;
+							height: 100vh;
+							top: 0;
+							left: 0;
+							background-color: rgba(0, 0, 0, 0.7);
+							z-index: 0;
+						}
+
+						.btn {
+							margin-bottom: 10px;
+						}
+
+						.btn-primary {
+							width: 100%;
+							background-color: #f68e4f;
+							border: none;
+							&:hover {
+								filter: brightness(85%);
+								background-color: #f68e4f;
+								border: none;
+							}
+						}
+						.btn-secondary {
+							width: 100%;
+							background-color: #efefef;
+							border: none;
+							color: grey;
+							&:hover {
+								filter: brightness(85%);
+								background-color: #efefef;
+								border: none;
+								color: grey;
+							}
+						}
+					}
+				}
+			}
+		}
+		.shopping-cart-container {
+			padding: 15px;
+			background-color: #343a40;
+			color: white;
+			display: none;
+			#shopping-cart {
+				#shopping-cart-row {
+					.shopping-cart-description {
+						h2 {
+							font-size: 28px;
+						}
+						ul {
+							padding: 10px 0 20px 0px;
+							font-size: 12px;
+							.list-group-item {
+								border: none;
+								background-color: #343a40;
+								padding: 10px 0;
+							}
+						}
+						.alert-danger {
+							display: none;
+						}
+						fieldset {
+							input {
+								margin-left: 10px;
+							}
+						}
+						.btn {
+							margin-top: 10px;
+						}
+						.btn-primary {
+							width: 100%;
+							background-color: #f68e4f;
+							border: none;
+							&:hover {
+								filter: brightness(85%);
+								background-color: #f68e4f;
+								border: none;
+							}
+						}
+						.btn-secondary {
+							width: 100%;
+							background-color: #efefef;
+							border: none;
+							color: grey;
+							&:hover {
+								filter: brightness(85%);
+								background-color: #efefef;
+								border: none;
+								color: grey;
+							}
+						}												
+					}
+				}
+			}
+		}
+	}
+}
+
+
